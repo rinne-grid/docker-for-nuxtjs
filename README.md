@@ -13,6 +13,8 @@
 
 ``` bash
 # --- hostで実行 ---
+$ git clone https://github.com/rinne-grid/docker-for-nuxtjs docker-for-nuxtjs
+$ cd ./docker-for-nuxtjs
 $ mkdir sample-project
 $ docker-compose up -d
 $ docker-compose exec dev bash
