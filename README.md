@@ -26,7 +26,7 @@ $ yarn install
 
 #### Dockerゲストのアプリに接続できるようにする
 
-* package.jsonの25行目付近に追加
+* package.jsonの修正(25行目付近に追加)
 
 ```json
   "config": {
@@ -39,7 +39,7 @@ $ yarn install
 
 #### ホットリロード対応
 
-* nuxt.conf.jsの修正 (37行目付近に追加)
+* nuxt.conf.jsの修正(37行目付近に追加)
 
 ```js
   watchers: {
