@@ -3,9 +3,10 @@ FROM centos:centos7
 RUN yum -y install epel-release
 
 RUN yum update -y && \
-    yum -y install git wget curl gcc-c++ make && \
+    yum -y install git wget curl gcc-c++ make vim && \
     yum -y groupinstall "Development tools"
 
+ENV EDITOR=vim
 ENV HOME /root
 
 # golang
@@ -23,10 +24,8 @@ RUN bash remi.sh
 
 # direnv
 WORKDIR $HOME
-RUN git clone https://github.com/direnv/direnv && \
-    cd ./direnv && \
-    make && \
-    make install
+ADD ./direnv.sh $HOME/direnv.sh
+RUN bash direnv.sh
 
 RUN echo eval "$(direnv hook bash)" >> ~/.bashrc
 
