@@ -74,3 +74,9 @@ $ cd project
 $ yarn run dev
 ```
 
+### よくある問題
+
+#### Step13/25: RUN bash remi.shでエラーになる
+
+* dev/remi.shやdev/direnv.shの改行コードがCRLFになっている可能性があるので、LFを指定してください
+
