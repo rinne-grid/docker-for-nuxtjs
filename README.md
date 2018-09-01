@@ -21,7 +21,7 @@ $ docker-compose exec dev bash
 # --- Docker上で実行 ---
 $ cd sample-project
 $ vue init nuxt-community/starter-template .
-$ yarn install
+$ yarn
 ```
 
 #### Dockerゲストのアプリに接続できるようにする
